@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import NextCSV from './components/NextCSV'
+import Thumbname from './components/Thumbname'
+import Article from './components/Article';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return(
+    <div>
+      <NextCSV
+        month={7}
+        date = {18}
+      />
+      <p>------導入-------</p>
+      <p>最初のコンポーネント導入</p>
+      <Thumbname />
+      <Article
+        title = 'my fist article'
+        body = "I'd got started with react x Typescript"
+      />
     </div>
   );
 }
